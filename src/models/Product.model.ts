@@ -18,3 +18,10 @@ export async function createProduct(product: Product): Promise<Product> {
   };
   return newProduct;
 }
+
+export async function getAllProducts(): Promise<Product[]> {
+  const sql = 'SELECT * FROM Trybesmith.Products';
+
+  const [products] = await connection.execute(sql);
+  return products as Product[];
+}
