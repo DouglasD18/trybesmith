@@ -18,3 +18,9 @@ export interface Order {
   userId: number;
   productsIds: number[];
 }
+
+export interface Login {
+  id?: number;
+  username: string;
+  password?: string;
+}
