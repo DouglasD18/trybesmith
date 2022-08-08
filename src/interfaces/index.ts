@@ -13,10 +13,13 @@ export interface User {
   password: string;
 }
 
-export interface Order {
-  id?: number;
-  userId: number;
+export interface ProductsIds {
   productsIds: number[];
+}
+
+export interface Order extends ProductsIds {
+  id?: number;
+  userId?: number;
 }
 
 export interface Login {

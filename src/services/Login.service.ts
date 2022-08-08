@@ -1,6 +1,6 @@
 import { Login } from '../interfaces';
 import login from '../models/Login.model';
-import createToken from './token.service';
+import { createToken } from './token.service';
 
 function validateUser(user: Login) {
   const { username, password } = user;
